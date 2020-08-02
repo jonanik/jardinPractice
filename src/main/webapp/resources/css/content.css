@@ -1,5 +1,5 @@
 /*********** LAYOUT **********/
-#container{position:relative; max-width:900px; padding:46px 0 40px 0; margin:0 auto; *zoom:1;}
+#container{position:relative; max-width:900px; padding:46px 0 40px 0; height:100%; margin:0 auto; *zoom:1;}
 #container:after {content:""; display:block; clear:both;}
 #outbox{width:100%; margin:20px 0 0 0; overflow:hidden;}
 
@@ -420,7 +420,7 @@
 .checkDiv{width:100%; border-top:1px #5b524d solid; overflow:hidden;}
 .checkMt{width:100%; border-top:1px #5b524d solid; margin:-1px 0 0 0; overflow:hidden;}
 .checkInfoDiv{width:100%; border-top:1px #d9d9db solid; margin:30px 0 0 0; overflow:hidden;}
-.checkDivTab{width:100%; margin:20px 0 0 0; border-top:1px #5b524d solid; overflow:hidden;}
+.checkDivTab{width:100%; margin:0 0 0 0; border-top:1px #5b524d solid; overflow:hidden;}
 .checkTable{width:100%; border-width:0; border-spacing:0; border-style:none; font-size:14px;}
 .checkTable th{color:#666; vertical-align:top; text-align:left; font-size:14px; font-weight:600; height:38px;  background:#ebebeb; border-bottom:1px #d9d9d9 solid; vertical-align:middle;}
 .checkTable th.info{font-weight:normal; font-size:13px;}

@@ -1,7 +1,7 @@
 /* layout */
 html{overflow-y:scroll; width:100%;}
-#allwrap{position:relative; width:100%; overflow:hidden;}
-#wrap{}
+#allwrap{position:relative; width:100%;  overflow:hidden;}
+#wrap{height:100%;}
 
 
 /* 하위브라우저 체크 */

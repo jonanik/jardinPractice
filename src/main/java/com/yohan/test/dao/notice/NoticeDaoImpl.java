@@ -39,4 +39,16 @@ public class NoticeDaoImpl implements NoticeDao {
 		
 	}
 
+	//공지사항 글 쓰기
+	@Override
+	public void noticeWrite(NoticeDto noticeDto) {
+		sqlsession.insert("notice.noticeWrite",noticeDto);
+		
+	}
+
+	@Override
+	public NoticeDto noticeModifyForm(int no) {
+		return sqlsession.selectOne("notice.noticeModifyForm",no);
+	}
+
 }

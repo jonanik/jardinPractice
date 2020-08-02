@@ -56,4 +56,13 @@
 	delete notice where no=#{no}
 	</delete>
 	
+	<!-- 공지사항 글 쓰기 -->
+	<insert id="noticeWrite">
+	insert into notice values(notice_seq.nextval,#{title},#{content},0,sysdate)
+	</insert>
+	
+	<!-- 공지사항 글 수정폼 정보 가져오기 -->
+	<select id="noticeModifyForm" resultType="com.yohan.test.dto.notice.NoticeDto">
+	select * from notice where no=#{no}
+	</select>
 	</mapper>

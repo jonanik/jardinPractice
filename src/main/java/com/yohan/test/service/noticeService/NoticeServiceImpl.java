@@ -22,7 +22,7 @@ public class NoticeServiceImpl implements NoticeService {
 		return noticeDao.noticeList(sv);
 	}
 
-	//공지사항 리스트 글 갯수
+	// 공지사항 리스트 글 갯수
 	@Override
 	public PageDto noticeListNum(SearchValDto sv) {
 		PageDto pDto = noticeDao.noticeListNum(sv);
@@ -35,23 +35,32 @@ public class NoticeServiceImpl implements NoticeService {
 		pDto.setEnd_page(pDto.getCur_range(), pDto.getRange_cnt()); // 현재 블럭 끝
 		return pDto;
 	}
-	
+
 	// 공지사항 상세페이지
 	@Override
 	public NoticeDto noticeView(int no) {
-		NoticeDto noticeDto=noticeDao.noticeView(no);
-		String temp=noticeDto.getContent();
-		noticeDto.setContent(temp.replace("\\r\\n","<br><br>"));
+		NoticeDto noticeDto = noticeDao.noticeView(no);
+		String temp = noticeDto.getContent();
+		noticeDto.setContent(temp.replace(".", "<br><br>"));
 		return noticeDto;
 	}
 
-	//공지사항 글 삭제
+	// 공지사항 글 삭제
 	@Override
 	public void noticeDelete(int no) {
 		noticeDao.noticeDelete(no);
-		
 	}
 
-	
+	// 공지사항 글 쓰기
+	@Override
+	public void noticeWrite(NoticeDto noticeDto) {
+		noticeDao.noticeWrite(noticeDto);
+	}
+
+	// 공지사항 글 수정
+	@Override
+	public NoticeDto noticeModifyForm(int no) {
+		return noticeDao.noticeModifyForm(no);
+	}
 
 }

@@ -19,4 +19,10 @@ public interface NoticeDao {
 	
 	//공지사항 글 삭제
 	public void noticeDelete(int no);
+	
+	//공지사항 글 쓰기
+	public void noticeWrite(NoticeDto noticeDto);
+	
+	//공지사항 글 수정
+	public NoticeDto noticeModifyForm(int no);
 }

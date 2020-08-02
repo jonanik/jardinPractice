@@ -43,5 +43,23 @@ public class NoticeController {
 	public void noticeDelete(int no) {
 		noticeService.noticeDelete(no);
 	}
+	//공지사항 글 쓰기 폼
+	@RequestMapping("noticeWriteForm")
+	public String noticeWriteForm() {
+		return "notice/noticeWriteForm";
+	}
+	@RequestMapping("noticeWrite")
+	@ResponseBody
+	public void noticeWrite(NoticeDto noticeDto) {
+		noticeService.noticeWrite(noticeDto);
+	}
+	
+	@RequestMapping("noticeModifyForm")
+	@ResponseBody
+	public NoticeDto noticeModifyForm(Model model,int no) {
+		NoticeDto noticeDto=noticeService.noticeModifyForm(no);
+		return noticeDto;
+	}
+	
 	
 }

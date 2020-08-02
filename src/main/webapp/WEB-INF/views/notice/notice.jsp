@@ -270,7 +270,7 @@
 								</table>
 							</div>
 							<div style="float:right; margin-top:15px;">
-							<a href="#" style="" class="sbtnMini mw">글쓰기</a>
+							<a href="noticeWriteForm" class="sbtnMini mw">글쓰기</a>
 							</div>
 
 							<div class="btnAreaList">

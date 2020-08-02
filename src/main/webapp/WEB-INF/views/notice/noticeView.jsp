@@ -262,7 +262,7 @@ $(document).ready(function() {
 						<div class="bRight">
 							<ul>
 								<li><a href="javascript:history.back()" class="sbtnMini mw">목록</a></li>
-								<li><a href="#" class="sbtnMini mw">수정</a></li>
+								<li><a href="#" onclick="noticeModifyForm('${noticeView.no}')" class="sbtnMini mw">수정</a></li>
 								<li><a href="#" onclick="noticeDelete('${noticeView.no}')" class="sbtnMini mw">삭제</a></li>
 							</ul>
 						</div>
